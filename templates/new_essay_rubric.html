@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Rubric - Acadexa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>body { font-family: 'Inter', sans-serif; }</style>
+<base target="_blank">
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen">
+    <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <a href="/" class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                        <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                    </div>
+                    <span class="text-xl font-bold text-slate-900">Acadexa</span>
+                </a>
+                <a href="/essay_grading" class="text-sm text-slate-600 hover:text-slate-900">Back to Grading</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-3xl mx-auto px-4 py-12">
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-8">
+            <div class="mb-6">
+                <h1 class="text-2xl font-bold text-slate-900 mb-2">Custom Grading Rubric</h1>
+                <p class="text-slate-600">Define your own evaluation criteria. This rubric will be used for all future essay gradings until changed.</p>
+            </div>
+
+            <form action="/essay_grading" method="POST" class="space-y-6">
+                <div>
+                    <label class="block text-sm font-medium text-slate-700 mb-2">Rubric Criteria</label>
+                    <textarea name="essay_rubric" rows="16"
+                        class="w-full bg-slate-50 border border-slate-200 rounded-xl p-4 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none font-mono leading-relaxed"
+                        placeholder="Enter your custom rubric here...">Evaluate the essay based on:
+
+1. Content
+2. Organization
+3. Grammar
+4. Vocabulary
+5. Clarity
+6. Overall quality
+
+Provide a score and constructive feedback.</textarea>
+                </div>
+
+                <div class="flex gap-3">
+                    <button type="submit" class="flex-1 bg-blue-600 text-white font-medium py-3 rounded-xl hover:bg-blue-700 transition-colors">
+                        Save Rubric
+                    </button>
+                    <a href="/essay_grading" class="px-6 py-3 border border-slate-200 text-slate-700 font-medium rounded-xl hover:bg-slate-50 transition-colors">
+                        Cancel
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
